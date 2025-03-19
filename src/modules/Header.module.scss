@@ -7,8 +7,8 @@
   height: 88px;
   justify-content: space-between;
   border-bottom-width: 1px;
-  padding-right: 16px;
-  padding-left: 16px;
+  //padding-right: 16px;
+  //padding-left: 16px;
 
   .search-wrapper {
     background-color: rgba(245, 245, 245, 1);
@@ -33,12 +33,11 @@
       gap: 52px;
       li {
         color: black;
-        a{
-          color: black;
-        }
-        .navlink {
+       opacity:40%;
+        .navLink{
           text-decoration: none;
           color: rgba(0, 0, 0, 0.3);
+          opacity:40%;
           font-family: Inter, monospace;
           font-weight: 500;
           font-size: 16px;
@@ -63,6 +62,8 @@
 
 
 }
+
+
 
 
 

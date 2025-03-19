@@ -48,59 +48,25 @@ export const Header = () => {
                   <input placeholder='Search' type='text'/>
               </figure>
 
-              {/*<nav>*/}
-              {/*    <ul>*/}
-              {/*        {navItems && navItems.length > 0 ? (*/}
-              {/*            navItems.map((item, index) => {*/}
-              {/*                // Access the first key dynamically (e.g., 'home', 'about', etc.)*/}
-              {/*                const key = Object.keys(item)[0];  // Get the first key (e.g., 'home')*/}
-              {/*                const {name, slug} = item[key];  // Destructure name and slug*/}
-              {/*                return (*/}
-              {/*                    <li key={index}>*/}
-              {/*                        <Link to={slug}>{name}</Link>*/}
-              {/*                    </li>*/}
-              {/*                );*/}
-              {/*            })*/}
-              {/*        ) : (*/}
-              {/*            <li>Loading...</li>*/}
-              {/*        )}*/}
-              {/*    </ul>*/}
-              {/*</nav>*/}
+              <nav>
+                  <ul>
+                      {navItems.map((navItem, index) => {
 
-                <nav>
-                    <ul >
+                          return (
+
+                              <li key={index} >
+                                  <Link className={`${classes['navLink']} ${classes['active']}`}
+                                        to={navItem.slug}>
+                                      {navItem.name}
+                                  </Link>
 
 
-                                    <li>
-                                        <Link className={`${classes['navlink']} ${classes['active']}`}
-                                              to={'/'}>
-                                       home
-                                        </Link>
-                                    </li>
+                              </li>
+                          );
+                      })}
+                  </ul>
+              </nav>
 
-
-                                    <li>
-                                        <Link className={classes['navlink']} to={'/about'}>
-              about
-                                        </Link>
-                                    </li>
-
-
-                                    <li>
-                                        <Link className={classes['navlink']} to={'/contactUs'}>
-                            contact us
-                                        </Link>
-                                    </li>
-
-                                    <li>
-                                        <Link className={classes['navlink']} to={'/blog'}>
-                      blog
-                                        </Link>
-                                    </li>
-
-
-                    </ul>
-                </nav>
 
 
               <figure className={classes['icons-wrapper']}>
