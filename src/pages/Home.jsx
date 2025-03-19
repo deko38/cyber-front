@@ -1,5 +1,6 @@
 import {Header} from "../components/Header.jsx";
 import Hero from "../components/Hero.jsx"
+import Categories from "../components/Categories.jsx";
 
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
     <>
      <Header />
         <Hero/>
+        <Categories/>
     </>
   )
 };

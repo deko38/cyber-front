@@ -1,33 +1,336 @@
+
 .banner{
-  width: 1440px;
+  background-color: #211C24;
+  width: 1130px;
   height: 632px;
-  justify-content: space-between;
-
-
-}
-
-.multiple-wrapper{
+  padding-right: 160px;
+  padding-left: 160px;
   display: flex;
+  .iphone-14{
+    //width: 406px;
+    //height: 632px;
+  }
+  .iphone-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .iphone-text-inside{
+    min-width: 400px;
+    gap: 24px;
+    p{
+      color: white;
+      width: 714px;
+      height: 32px;
+      opacity: 0.4;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 25px;
+      line-height: 32px;
+      letter-spacing: 0%;
+    }
+    h1{
+      width: 714px;
+      height: 72px;
+       font-family: 'Inter', sans-serif;
+      font-weight: 100;
+      font-size: 96px;
+      line-height: 72px;
+      letter-spacing: -1%;
+      color: white;
+span{
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 96px;
+  line-height: 72px;
+  letter-spacing: -1%;
+}
+    }
+
+    h5{
+      opacity: 0.4;
+      width: 714px;
+      height: 24px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0%;
+      color: #FFFFFF;
+    }
+    .btn{
+      width: 191px;
+      height: 56px;
+      gap: 8px;
+      padding: 16px 56px;
+      border-radius: 6px;
+      border: 1px solid #FFFFFF;
+      background-color: transparent;
+      color: white;
+    }
+  }
 }
 
-.macbook{
+//banner end
+
+
+.smaller-banner{
+  display: flex;
+  width: 1440px;
+  height: 600px;
+.left-banner{
   width: 720px;
   height: 600px;
-  gap: 1px;
-}
-
-.left-wrapper{
+.wide-square{
+  border: 2px solid red;
   display: flex;
-}
-.playstation{
   width: 720px;
   height: 328px;
+
+  .wide-square-img{
+    width: 344px;
+    height: 328px;
+  }
+.wide-square-text{
+display: flex;
+  justify-content: center;
+  align-items: center;
+  .wide-square-text-content{
+    width: 338px;
+    height: 128px;
+    max-width: 404px;
+    gap: 16px;
+h1{
+  width: 338px;
+  height: 40px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 49px;
+  line-height: 40px;
+  letter-spacing: 0%;
 }
-.airpods{
+  p{
+    width: 338px;
+    height: 72px;
+    font-family: 'Inter', sans-serif;    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0%;
+   color:  #909090;
+    padding-top:16px;
+
+  }
+}
+}
+
+}
+.mini-squares {
+  display: flex;
+  width: 720px;
+  height: 272px;
+
+  .mini {
+    display: flex;
+    width: 360px;
+    height: 272px;
+    gap: 48px;
+    border: 2px solid blue;
+    background-color: #EDEDED;
+
+    .mini-img {
+      width: 110px;
+      height: 272px;
+    }
+
+    .mini-text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .mini-text-content {
+        gap: 8px;
+
+        h1 {
+          width: 150px;
+          height: 120px;
+          font-family: 'Inter', sans-serif;
+          font-weight: 300;
+          font-size: 29px;
+          line-height: 40px;
+          letter-spacing: 0%;
+          color: black;
+
+          span {
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 29px;
+            line-height: 40px;
+            letter-spacing: 0%;
+            color: black;
+
+          }
+        }
+
+        p {
+          width: 150px;
+          height: 48px;
+          font-family: 'Inter', sans-serif;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 24px;
+          letter-spacing: 0%;
+          color:#909090;
+
+        }
+      }
+    }
+
+  }
+  //airpods end
+.mini-right{
+  display: flex;
   width: 360px;
   height: 272px;
+  gap: 48px;
+  border: 2px solid blue;
+  background-color: #353535;}
+
+
+  .mini-img {
+    width: 110px;
+    height: 272px;
+  }
+
+  .mini-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .mini-text-content {
+      gap: 8px;
+
+      h1 {
+        width: 150px;
+        height: 120px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 300;
+        font-size: 29px;
+        line-height: 40px;
+        letter-spacing: 0%;
+        color: white;
+
+        span {
+          font-family: 'Inter', sans-serif;
+          font-weight: 500;
+          font-size: 29px;
+          line-height: 40px;
+          letter-spacing: 0%;
+          color: white;
+
+        }
+      }
+
+      p {
+        width: 150px;
+        height: 48px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0%;
+        color:#909090;
+
+      }
+    }
+
+
+
+  }
+
+
+
+      }
+    }
+  //left banner end
+  //right start
+.right-banner{
+  width: 720px;
+  height: 600px;
+  gap: 12px;
+  display: flex;
+  padding-right: 0;
+  .macbook-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 164px 97px 164px 56px;
+
+    .macbook-text-content{
+
+      h1{
+        font-family: 'Inter', sans-serif;
+        font-weight: 100;
+        font-size: 64px;
+        line-height: 56px;
+        letter-spacing: 0%;
+span{
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 56px;
+  letter-spacing: 0%;
+color:black
 }
-.visionpro{
-  width: 360px;
-  height: 272px;
+      }
+      p{
+        margin-top:16px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0%;
+        width: 360px;
+        height: 72px;
+color:#909090
+      }
+
+.btn{
+  width: 191px;
+  height: 56px;
+  gap: 8px;
+  padding: 16px 56px;
+  border-radius: 6px;
+  border: 1px solid #000000;
+  background-color: transparent;
+margin-top: 16px;
+
 }
+    }
+    .macbook-img{
+
+      padding-top: 49px;
+      padding-bottom: 49px;
+      padding-left: 74px;
+      width: 292px;
+      height: 502px;
+
+    }
+  }
+}
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+

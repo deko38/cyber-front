@@ -10,24 +10,27 @@ import {Link} from "react-router";
 
 
 export const Header = () => {
-  const [navItems, setNavItems] = useState({});
-  const [menuOpen, setMenuOpen] = useState(false);
+    const [navItems, setNavItems] = useState([]);
 
-  useEffect(() => {
-    axios.get("http://localhost:5300/menus/navbarItems")
-        .then(response => {
-          console.log("Fetched menus:", response.data);
-          setNavItems(response.data[0]);
-        })
-        .catch(error => {
-          console.error("Error fetching data:", error);
-          setNavItems({});
-        });
-  }, []);
 
-  const burgerMenu =()=>{
-    setMenuOpen(!menuOpen)
-  }
+    useEffect(() => {
+
+        axios.get('http://localhost:5000/menus/navbarItems')
+            .then(response => {
+                setNavItems(response.data);
+                console.log('Navbar items:', response.data);
+                console.log(Array.isArray(navItems));
+            })
+            .catch(error => {
+                console.error('Error fetching data', error);
+            });
+    }, []);
+
+
+
+  // const burgerMenu =()=>{
+  //   setMenuOpen(!menuOpen)
+  // }
 
   return (
       <>
@@ -46,89 +49,69 @@ export const Header = () => {
               </figure>
 
               {/*<nav>*/}
-              {/*  <ul className={menuOpen ? classes['ul active'] : classes['ul']}>*/}
-              {/*    {navItems.map((navItem, index) => (*/}
-              {/*        <div key={index}>*/}
-              {/*          {navItem.home && (*/}
-              {/*              <li>*/}
-              {/*                <Link className={`${classes['navlink']} ${classes['active']}`} to={navItem.home.slug}>*/}
-              {/*                  {navItem.home.name}*/}
-              {/*                </Link>*/}
-              {/*              </li>*/}
-              {/*          )}*/}
-              {/*          {navItem.about && (*/}
-              {/*              <li>*/}
-              {/*                <Link className={classes['navlink']} to={navItem.about.slug}>*/}
-              {/*                  {navItem.about.name}*/}
-              {/*                </Link>*/}
-              {/*              </li>*/}
-              {/*          )}*/}
-              {/*          {navItem.contactUs && (*/}
-              {/*              <li>*/}
-              {/*                <Link className={classes['navlink']} to={navItem.contactUs.slug}>*/}
-              {/*                  {navItem.contactUs.name}*/}
-              {/*                </Link>*/}
-              {/*              </li>*/}
-              {/*          )}*/}
-              {/*          {navItem.blog && (*/}
-              {/*              <li>*/}
-              {/*                <Link className={classes['navlink']} to={navItem.blog.slug}>*/}
-              {/*                  {navItem.blog.name}*/}
-              {/*                </Link>*/}
-              {/*              </li>*/}
-              {/*          )}*/}
-              {/*        </div>*/}
-              {/*    ))}*/}
-              {/*  </ul>*/}
+              {/*    <ul>*/}
+              {/*        {navItems && navItems.length > 0 ? (*/}
+              {/*            navItems.map((item, index) => {*/}
+              {/*                // Access the first key dynamically (e.g., 'home', 'about', etc.)*/}
+              {/*                const key = Object.keys(item)[0];  // Get the first key (e.g., 'home')*/}
+              {/*                const {name, slug} = item[key];  // Destructure name and slug*/}
+              {/*                return (*/}
+              {/*                    <li key={index}>*/}
+              {/*                        <Link to={slug}>{name}</Link>*/}
+              {/*                    </li>*/}
+              {/*                );*/}
+              {/*            })*/}
+              {/*        ) : (*/}
+              {/*            <li>Loading...</li>*/}
+              {/*        )}*/}
+              {/*    </ul>*/}
               {/*</nav>*/}
 
-              <nav>
-                  <ul >
+                <nav>
+                    <ul >
 
 
-
-                                  <li>
-                                      <Link className={`${classes['navlink']} ${classes['active']}`}
-                                            to={'/'}>
-                                     home
-                                      </Link>
-                                  </li>
-
-
-                                  <li>
-                                      <Link className={classes['navlink']} to={'/about'}>
-            about
-                                      </Link>
-                                  </li>
+                                    <li>
+                                        <Link className={`${classes['navlink']} ${classes['active']}`}
+                                              to={'/'}>
+                                       home
+                                        </Link>
+                                    </li>
 
 
-                                  <li>
-                                      <Link className={classes['navlink']} to={'/contactUs'}>
-                          contact us
-                                      </Link>
-                                  </li>
-
-                                  <li>
-                                      <Link className={classes['navlink']} to={'/blog'}>
-                    blog
-                                      </Link>
-                                  </li>
+                                    <li>
+                                        <Link className={classes['navlink']} to={'/about'}>
+              about
+                                        </Link>
+                                    </li>
 
 
+                                    <li>
+                                        <Link className={classes['navlink']} to={'/contactUs'}>
+                            contact us
+                                        </Link>
+                                    </li>
 
-                  </ul>
-              </nav>
+                                    <li>
+                                        <Link className={classes['navlink']} to={'/blog'}>
+                      blog
+                                        </Link>
+                                    </li>
 
 
-              <figure className={menuOpen ? classes['icons-wrapper active'] : classes['icons-wrapper']}>
+                    </ul>
+                </nav>
+
+
+              <figure className={classes['icons-wrapper']}>
                   <img src={cart} alt="cart-icon"/>
                   <img src={favorites} alt="favorites-icon"/>
                   <img src={profile} alt="profile-icon"/>
               </figure>
 
-              <div className={classes['hamburger']} onClick={burgerMenu}>
-                  {menuOpen ? ' ☰' : '×'}
-              </div>
+              {/*<div className={classes['hamburger']} onClick={burgerMenu}>*/}
+              {/*    {menuOpen ? ' ☰' : '×'}*/}
+              {/*</div>*/}
 
           </header>
       </>
